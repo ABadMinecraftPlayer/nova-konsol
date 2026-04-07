@@ -12,17 +12,17 @@
 <body>
     <header>
         <nav>
+            <a href="index.html"> <img src="./img/nova_logo.png" alt="nova logo"> </a>
             <ul>
-                <li><a href="index.html"> <img src="img/nova_logga.png"></a></li>
-                <li onclick="sent()">Games</li>
-                <li onclick="sent()">Consoles</li>
-                <li onclick="sent()">Accesories</li>
-                <li onclick="sent()">News</li>
-                <li onclick="sent()">Store</li>
-                <li onclick="sent()">Support</li>
+                <li>Games</li>
+                <li>Consoles</li>
+                <li>Accesories</li>
+                <li>News</li>
+                <li>Store</li>
+                <li>Support</li>
             </ul>
             <div>
-                <span onclick="sent()">Sign In</span>
+                <span>Sign In</span>
                 <div class="search">
                     <input id="search-input" name="search-input" placeholder="Search">
                 </div>
@@ -83,25 +83,81 @@
         </section>
     </main>
     <footer>
-        <div>
-            <h3>Products</h3>
-            <p><a>Nova consoles</a></p>
-            <p><a>Nova games</a></p>
-            <p><a>Nova Accessories</a></p>
+        <div id="footer-top">
+            <div id="footer-top-left">
+                <div>
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Nova consoles</a></li>
+                        <li><a href="#">Nova games</a></li>
+                        <li><a href="#">Nova Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="#">Nova AI</a></li>
+                        <li><a href="#">Official Blog</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Developers</h3>
+                    <ul>
+                        <li><a href="#">Developer Portal</a></li>
+                        <li><a href="#">Developer Key</a></li>
+                        <li><a href="#">API Reference</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Support Docs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-top-right">
+                <p>Empowering your gaming experience with long-term innovation.</p>
+                <div id="socials">
+                    <a href="#"><img src="img/x_icon.svg" alt="x icon"></a>
+                    <a href="#"><img src="img/linkedin_icon.svg" alt="linkedin icon"></a>
+                </div>
+            </div>
         </div>
-        <div>
-            <h3>Resources</h3>
-            <p><a>Support</a></p>
-            <p><a>Feedback</a></p>
-            <p><a>Community</a></p>
-            <p><a>News</a></p>
+        <div id="footer-bottom">
+            <p>© 2024 Nova Corporation. All rights reserved.</p>
+            <div id="footer-bottom-right">
+                <div id="lang"><img src="img/lang_icon.png" alt="language">
+                    <select id="language-chosen">
+                        <option>English</option>
+                        <option>Svenska</option>
+                    </select>
+                </div>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <h3>Developers</h3>
-            <p><a>Developer Portal</a></p>
-            <p><a>API Reference</a></p>
-        </div>
-        <div><img src="img/lang_icon.png" alt="language"><p>English</p></div>
     </footer>
 </body>
 
