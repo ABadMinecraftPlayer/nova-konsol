@@ -199,7 +199,8 @@ PRODUCT INFO
 }
 
 #card-1_display_img {
-    background: no-repeat url("../img/placeholder.png") center / cover;
+    transition: 1s ease-in-out;
+    background: no-repeat url("../img/placeholder1.png") center / cover;
     height: 100%;
     width: 100%;
 }
@@ -363,9 +364,22 @@ footer li {
 
 #footer-top-right {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 41vw;
+    margin-top: 8vh;
+    flex-direction: column;
+    gap: 5vh;
+    width: 40vw;
+}
+
+#footer-top-right p {
+    color: #F1F3F5;
+    font-size: 1.25rem;
+    width: 80%;
+}
+
+#footer-top-right img {
+    width: 250px;
+    height: auto;
+    ;
 }
 
 #socials {
