@@ -35,21 +35,31 @@
         </section>
         <section class="info">
             <div>
-                <h1>DISCOVER ALL OF NOVAS PRODUCTS</h1>
                 <!-- alignment of info -->
-                <div id="product-info_alignment">
-                    <h2>NovaBase 6 Gaming Console</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione inventore
-                        recusandae nihil dolorum iste ex architecto quis, minus veniam minima, nobis doloribus numquam
-                        ipsa
-                        rem
-                        sint eos.</p>
+                <div id="product-info_text">
+                    <h1>DISCOVER ALL OF NOVAS PRODUCTS</h1>
+                    <div>
+                        <h2>NovaBase 6 Gaming Console</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione
+                            inventore
+                            recusandae nihil dolorum iste ex architecto quis, minus veniam minima, nobis doloribus
+                            numquam
+                            ipsa
+                            rem
+                            sint eos.</p>
+                        <br></br>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione
+                            inventore
+                            recusandae nihil dolorum iste ex architecto quis, minus veniam minima.
+                        </p>
+                    </div>
                 </div>
+                <div id="card-1_display_img"></div>
             </div>
-            <div id="card-1_display_img">
-            </div>
-            <div id="side-scroll_product_info">
-                <ul>
+            <div>
+                <button id="left-scroll" onclick="AutoManualSwap(2)">&lt;</button>
+                <ul id="side-scroll_product_info">
                     <li>
                         <div onclick="SwapInfo(1)"><img src="img/placeholder1.png" alt="product1" id="swapinfo_1"></div>
                     </li>
@@ -69,6 +79,7 @@
                         <div onclick="SwapInfo(6)"><img src="img/placeholder6.png" alt="product6" id="swapinfo_6"></div>
                     </li>
                 </ul>
+                <button id="right-scroll" onclick="AutoManualSwap(1)">&gt;</button>
             </div>
         </section>
         <section id="wall-of-imgs">
