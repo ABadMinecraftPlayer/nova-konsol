@@ -34,7 +34,7 @@
             <img src="./img/placeholder.png" alt="Nova Console 6">
         </section>
         <section class="info">
-            <div>
+            <div id="main-info">
                 <!-- alignment of info -->
                 <div id="product-info_text">
                     <h1>DISCOVER ALL OF NOVAS PRODUCTS</h1>
@@ -57,30 +57,35 @@
                 </div>
                 <div id="card-1_display_img"></div>
             </div>
-            <div>
-                <button id="left-scroll" onclick="AutoManualSwap(2)">&lt;</button>
-                <ul id="side-scroll_product_info">
-                    <li>
-                        <div onclick="SwapInfo(1)"><img src="img/placeholder1.png" alt="product1" id="swapinfo_1"></div>
-                    </li>
-                    <li>
-                        <div onclick="SwapInfo(2)"><img src="img/placeholder2.png" alt="product2" id="swapinfo_2"></div>
-                    </li>
-                    <li>
-                        <div onclick="SwapInfo(3)"><img src="img/placeholder3.png" alt="product3" id="swapinfo_3"></div>
-                    </li>
-                    <li>
-                        <div onclick="SwapInfo(4)"><img src="img/placeholder4.png" alt="product4" id="swapinfo_4"></div>
-                    </li>
-                    <li>
-                        <div onclick="SwapInfo(5)"><img src="img/placeholder5.png" alt="product5" id="swapinfo_5"></div>
-                    </li>
-                    <li>
-                        <div onclick="SwapInfo(6)"><img src="img/placeholder6.png" alt="product6" id="swapinfo_6"></div>
-                    </li>
-                </ul>
-                <button id="right-scroll" onclick="AutoManualSwap(1)">&gt;</button>
-            </div>
+            <div id="carousel">
+                <button id="left-scroll" onclick="carouselScroll(-1)">&lt;</button>
+                <div id="carousel-outer">
+                    <div id="view-track">
+                        <div id="track">
+                            <div onclick="SwapInfo(1)"><img src="img/placeholder1.png" alt="product1" id="swapinfo_1">
+                            </div>
+                            <div onclick="SwapInfo(2)"><img src="img/placeholder2.png" alt="product2" id="swapinfo_2">
+                            </div>
+                            <div onclick="SwapInfo(3)"><img src="img/placeholder3.png" alt="product3" id="swapinfo_3">
+                            </div>
+                            <div onclick="SwapInfo(4)"><img src="img/placeholder4.png" alt="product4" id="swapinfo_4">
+                            </div>
+                            <div onclick="SwapInfo(5)"><img src="img/placeholder5.png" alt="product5" id="swapinfo_5">
+                            </div>
+                            <div onclick="SwapInfo(6)"><img src="img/placeholder6.png" alt="product6" id="swapinfo_6">
+                            </div>
+                            <div onclick="SwapInfo(7)"><img src="img/placeholder7.png" alt="product7" id="swapinfo_7">
+                            </div>
+                            <div onclick="SwapInfo(8)"><img src="img/placeholder8.png" alt="product8" id="swapinfo_8">
+                            </div>
+                            <div onclick="SwapInfo(9)"><img src="img/placeholder9.png" alt="product9" id="swapinfo_9">
+                            </div>
+                            </ul>
+                        </div>
+                        <!--Clone goes here-->
+                    </div>
+                </div>
+                <button id="right-scroll" onclick="carouselScroll(1)">&gt;</button>
         </section>
         <section id="wall-of-imgs">
             <ul>

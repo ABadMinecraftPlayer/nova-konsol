@@ -14,7 +14,7 @@
     --main-bg-color: #314058;
     --primary-text-color: #C28B3C;
     --navbar-height: 6rem;
-    --info-product-count: 6;
+    --info-product-count: 7;
 
     background-color: var(--main-bg-color);
 }
@@ -162,11 +162,11 @@ PRODUCT INFO
     display: flex;
     flex-direction: column;
     padding-top: var(--navbar-height);
-    padding: 6rem 3rem;
-    min-height: calc(100vh - var(--navbar-height) - 2 * 3rem);
-    row-gap: 5vh;
+    padding: 10vh 3rem;
+    min-height: calc(100vh - var(--navbar-height) - 12vh);
     background-color: var(--main-bg-color);
     justify-content: space-between;
+    row-gap: 5vh;
 }
 
 .info div {
@@ -175,44 +175,16 @@ PRODUCT INFO
     gap: 1.5vw;
 }
 
-.info div:nth-child(1) {
-    height: 50vh;
-}
-
-.info div:nth-child(2) button {
-    position: absolute;
-    align-self: center;
-    background-color: #c28a3c;
-    border: transparent solid 1px;
-    border-radius: 100%;
-    color: #F1F3F5;
-    font-size: 50px;
-    height: 70px;
-    width: 70px;
-    z-index: 5;
-    cursor: pointer;
-}
-
-.info div:nth-child(2) button:hover {
-    background-color: #946a2f;
-    transition: background-color 0.2s ease;
-}
-
-#left-scroll {
-    left: 20px;
-}
-
-#right-scroll {
-    right: 20px;
+#main-info {
+    height: 100%;
+    flex-grow: 3;
 }
 
 #product-info_text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    width: 50%;
-    gap: 0;
+    width: 50vw;
 }
 
 #product-info_text div {
@@ -248,59 +220,42 @@ PRODUCT INFO
     border: #263041 5px solid;
 }
 
-/* side-scroll info */
+/* carousel info */
 
-#side-scroll_product_info {
+#carousel {
     display: flex;
+    gap: 1vw;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-    gap: 1rem;
+    max-height: 100%;
+    flex-grow: 2;
 }
 
-#side-scroll_product_info li {
-    height: 20vh;
-    border-radius: 1rem;
-    padding: 6px;
-    border: none;
-    transition: border 300ms ease;
-    border: solid 1px transparent;
-    flex-grow: 1;
-}
-
-#side-scroll_product_info div {
-    width: 100%;
-    height: 100%;
+#carousel-outer {
+    width: 90vw;
     overflow: hidden;
-    border-radius: 1rem;
 }
 
-#side-scroll_product_info img {
-    width: 100%;
+#view-track {
+    position: relative;
+    width: 90vw;
+    height: 200px;
+    overflow: visible;
+}
+
+#view-track div {
     height: 100%;
+}
+
+#track div {
+    width: 17vw;
+}
+
+#track div img {
     object-fit: cover;
-}
-
-#side-scroll_product_info img {
     width: 100%;
-    height: 100%;
-    transition: transform 500ms ease;
 }
-
-#side-scroll_product_info img:hover {
-    transform: scale(1.2);
-}
-
-#side-scroll_product_info li:hover {
-    border: solid 1px #8cc5ff;
-}
-
-#side-scroll_product_info span {
-    color: #F1F3F5;
-    font-size: 1.25rem;
-}
-
 
 /*  
 ############
