@@ -14,7 +14,7 @@
     --main-bg-color: #314058;
     --primary-text-color: #C28B3C;
     --navbar-height: 6rem;
-    --info-product-count: 7;
+    --viewable-amnt-carousel: 5;
 
     background-color: var(--main-bg-color);
 }
@@ -46,7 +46,7 @@ nav {
     z-index: 999;
 }
 
-nav ul {
+#nav-list {
     display: flex;
     gap: 50px;
     margin-left: 10px;
@@ -78,28 +78,30 @@ nav li:hover {
     transition: color 0.1s ease;
 }
 
-nav div {
+nav>div {
     display: flex;
     align-items: center;
     justify-content: right;
     gap: 25px;
     padding-right: 10px;
+    height: 50px;
 }
 
-nav div span:hover {
-    color: #ffb681;
-    background-color: #263041;
-    transition: all 0.2s ease;
-}
-
-nav div span {
+nav>div span:not(.hamburger-lines span) {
     cursor: pointer;
     background-color: var(--main-bg-color);
     padding: 5px 20px;
     border-radius: 10px;
 }
 
+nav>div>span:hover:not(.hamburger-lines span) {
+    color: #ffb681;
+    background-color: #263041;
+    transition: all 0.2s ease;
+}
+
 .search input {
+    position: relative;
     padding: 10px 10px;
     border-radius: 10px;
     width: 250px;
@@ -115,7 +117,6 @@ nav div span {
     background-image: url("../img/search_button.jpg");
     background-position: center;
     background-size: cover;
-    margin-right: 10px;
     cursor: pointer;
 }
 
@@ -217,44 +218,69 @@ PRODUCT INFO
     transition: all 1s ease-in-out;
     background: no-repeat url("../img/placeholder1.png") center / cover;
     flex-grow: 1;
-    border: #263041 5px solid;
+    border: #263041 7px solid;
 }
 
 /* carousel info */
 
 #carousel {
     display: flex;
-    gap: 1vw;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-height: 100%;
-    flex-grow: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+    gap: 0;
+    background: #122131;
+    border-radius: 10px;
+    padding: 10px 20px;
 }
 
-#carousel-outer {
-    width: 90vw;
-    overflow: hidden;
+#carousel button {
+    height: 160px;
+    width: 25px;
+    background-color: #c59756;
+    border: transparent;
+    font-size: 30px;
+    border-radius: 5px;
+    color: white;
+}
+
+#carousel button:hover {
+    cursor: pointer;
 }
 
 #view-track {
-    position: relative;
-    width: 90vw;
-    height: 200px;
-    overflow: visible;
-}
-
-#view-track div {
-    height: 100%;
-}
-
-#track div {
-    width: 17vw;
-}
-
-#track div img {
-    object-fit: cover;
+    overflow: hidden;
     width: 100%;
+    height: 200px;
+    margin: 0 1vw;
+}
+
+#track {
+    --gap: 1vw;
+    gap: var(--gap);
+
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+#track>div {
+    flex: 0 0 calc((100% - (5 * var(--gap))) / 5);
+    justify-content: left;
+    overflow: hidden;
+    border-radius: 10px;
+    border: transparent 2px solid;
+}
+
+#track img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: scale 0.5s ease;
+}
+
+#track img:hover {
+    scale: 1.2;
 }
 
 /*  
@@ -449,4 +475,86 @@ footer li {
 
 #footer-bottom li {
     margin: 0;
+}
+
+/*  
+#################
+Device Adaptation
+################# 
+*/
+
+@media screen and (max-width: 1488px) {
+    #nav-list {
+        display: none;
+    }
+
+    .hamburger-lines {
+        display: flex;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+
+    .line {
+        display: block;
+        position: absolute;
+        width: 100%;
+        min-height: 5px;
+        background-color: white;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .line:nth-child(1) {
+        top: 10%;
+    }
+
+    .line:nth-child(3) {
+        bottom: 10%;
+    }
+
+    #hamburger-menu {
+        display:block;
+    }
+
+    #hamburger-menu:hover {
+        cursor: pointer;
+    }
+
+    #hamburger-content {
+        display: none;
+        /* in JS swap between none and flex */
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        background-color: #1e2735;
+        width: 100%;
+    }
+
+    #hamburger-content:last-child {
+        padding-bottom: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #hamburger-content li {
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #hamburger-content ul:nth-child(odd) {
+        background-color: #1d2635;
+    }
+
 }
