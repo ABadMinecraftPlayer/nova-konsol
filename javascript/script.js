@@ -15,6 +15,8 @@ const rightbuttonscroll = document.getElementById('right-scroll')
 
 // resizeFunctions
 function resizeFunctions() {
+    const carouselWidth = document.getElementById('carousel').offsetWidth;
+
     if (!window.matchMedia("(max-width: 1488px)").matches) {
         toggleHam = false;
 
@@ -27,6 +29,13 @@ function resizeFunctions() {
         hamburgerlines[1].style.opacity = "1";
         hamburgerlines[2].style.transform = "";
     }
+
+    document.documentElement.style.setProperty('--viewable-amnt-carousel', Math.round(carouselWidth / 392));
+    visible = Math.round(carouselWidth / 392);
+
+    track.style.transform = "translateX(0px)";
+    index = 0;
+    carouselScroll();
 }
 
 // Hamburger
