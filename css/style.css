@@ -132,7 +132,7 @@ HERO
 
 .hero {
     display: flex;
-    background: no-repeat center/cover url("../img/placeholder.png");
+    background: no-repeat center/cover url("../img/nova_swirl_animated_loop.gif");
     height: calc(100vh - var(--navbar-height));
     width: 100%;
     margin-top: var(--navbar-height);
@@ -151,8 +151,11 @@ HERO
 }
 
 .hero img {
-    width: 300px;
+    position: absolute;
+    bottom: 10px;
+    width: 500px;
     height: 500px;
+    object-fit: cover;
     align-self: flex-end;
     z-index: 1;
 }
@@ -194,7 +197,7 @@ PRODUCT INFO
     flex-direction: column;
     justify-content: space-between;
     width: 50vw;
-    gap:30px;
+    gap: 30px;
 }
 
 #product-info_text div {
@@ -224,10 +227,12 @@ PRODUCT INFO
 }
 
 #card-1_display_img {
-    transition: all 1s ease-in-out;
-    background: no-repeat url("../img/placeholder1.png") center / cover;
+    transition: background-image 1s ease-in-out;
+    background: no-repeat url("../img/nova_console.png") center / contain;
     flex-grow: 1;
-    border: #263041 7px solid;
+    background-color: #263041;
+    border: #122131 dashed 5px;
+    border-radius: 10px;
 }
 
 /* carousel info */
@@ -278,12 +283,15 @@ PRODUCT INFO
     overflow: hidden;
     border-radius: 10px;
     border: transparent 2px solid;
+    background-color: #0c1722;
+    padding: 10px;
 }
 
 #track img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-position: center;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
@@ -299,7 +307,7 @@ WALL OF IMGS
 
 #wall-of-imgs {
     padding: 0 1vw;
-    margin-bottom: calc(var(--navbar-height));
+    margin-bottom: 1vw;
 }
 
 #wall-of-imgs ul {
@@ -341,10 +349,11 @@ FOOTER
 */
 
 footer {
-    background-color: #122131;
     display: flex;
+    background-color: #122131;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 }
 
 footer a {
@@ -370,10 +379,10 @@ footer li {
 */
 #footer-top {
     display: flex;
-    justify-content: row;
+    justify-content: space-around;
     background-color: #122131;
-    width: 100%;
-    flex-wrap: wrap;
+    padding: 4vh 4vw;
+    gap: 20px;
 }
 
 /* footer-top-left */
@@ -382,26 +391,34 @@ footer li {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 8vh 0 8vh 8vw;
-    width: 50vw;
     grid-row-gap: 60px;
+    flex-grow: 2;
+    width: 10%;
 }
 
-#footer-top-left div {
+#footer-top-left>div {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+#footer-top-left>div>div {
     display: flex;
     flex-direction: column;
-    width: calc(50vw/3);
-    gap: 40px;
+    width: calc(100%/3);
+    gap: 30px;
 }
 
 /* footer-top-right */
 
 #footer-top-right {
     display: flex;
-    margin-top: 8vh;
     flex-direction: column;
     gap: 5vh;
-    width: 40vw;
+    flex-grow: 1;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
 }
 
 #footer-top-right p {
@@ -410,9 +427,15 @@ footer li {
     width: 80%;
 }
 
-#footer-top-right img {
-    width: 250px;
-    height: auto;
+#nova-logo_footer {
+    background-image: url("../img/nova_logo.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 16 / 6;
 }
 
 #socials {
@@ -433,8 +456,7 @@ footer li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
-    height: 10vh;
+    padding: 1vh 3vw;
     background-color: #0f1724;
 }
 
@@ -460,6 +482,7 @@ footer li {
     width: 200px;
     height: 100%;
 }
+
 
 #lang select {
     height: 40px;
@@ -491,8 +514,48 @@ Device Adaptation
 ################# 
 */
 
+@media screen and (max-width: 1762px) {
+    #main-info {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5vw;
+    }
+
+    .info {
+        padding: 30px 10px;
+    }
+
+    #product-info_text {
+        background-color: #263041;
+        border: #122131 dashed 5px;
+        padding: 30px;
+        border-radius: 10px;
+        width: calc(100% - 70px);
+    }
+
+    #main-info>div>div>div {
+        flex-direction: row;
+        row-gap: 5vw;
+    }
+
+    #card-1_display_img {
+        min-height: 55vh;
+        width: calc(100% - 20px);
+    }
+
+    #display_img-combo {
+        display: flex;
+    }
+}
+
 @media screen and (max-width: 1488px) {
     #nav-list {
+        display: none;
+    }
+
+    nav>div>span,
+    nav>div>.search {
         display: none;
     }
 
@@ -561,39 +624,81 @@ Device Adaptation
         cursor: pointer;
     }
 
-    #hamburger-content ul:nth-child(odd) {
-        background-color: #1d2635;
+    #hamburger-content li:last-child {
+        gap: 30px;
     }
-
 }
 
-@media screen and (max-width: 1762px) {
-    #main-info {
-        text-align: center;
+@media screen and (max-width: 1034px) {
+    #footer-bottom {
+        flex-wrap: wrap-reverse;
+    }
+
+    #footer-bottom {
+        justify-content: center;
+    }
+
+    #footer-bottom p {
+        width: 100%;
+        padding: 10px 0 5px 0;
+    }
+}
+
+@media screen and (max-width: 738px) {
+    #footer-top {
+        flex-wrap: wrap-reverse;
+        gap: 50px;
+        padding: 8vh 1vw;
+    }
+
+    #footer-top-right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    #footer-top-right {
+        width: 100%;
+    }
+
+    #footer-top-left {
+        width: 100%;
+    }
+
+    #footer-top-left div {
         flex-direction: column;
-        align-items: center;
-        row-gap: 5vw;
+        width: 50%;
+        flex-grow: 1;
     }
 
-    #product-info_text {
-        background-color: #263041;
-        border: #122131 dashed 5px;
-        padding: 30px;
-        border-radius: 10px;
-        width: calc(100% - 70px);
+    #footer-top-left div div {
+        width: 100%;
     }
 
-    #main-info>div>div>div {
-        flex-direction: row;
-        row-gap: 5vw;
+    .hero img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 433px) {
+    #footer-bottom-right {
+        flex-wrap: wrap-reverse;
+        gap: 20px;
     }
 
-    #card-1_display_img {
-        min-height: 55vh;
-        width: calc(100% - 20px);
+    #footer-bottom-right ul {
+        width: 100%;
+        padding-bottom: 20px;
+        justify-content: center;
     }
 
-    #display_img-combo {
-        display: flex;
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
     }
 }

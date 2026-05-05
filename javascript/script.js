@@ -17,7 +17,7 @@ const rightbuttonscroll = document.getElementById('right-scroll')
 function resizeFunctions() {
     const carouselWidth = document.getElementById('carousel').offsetWidth;
 
-    if (!window.matchMedia("(max-width: 1488px)").matches) {
+    if (!window.matchMedia("(max-width: 728px)").matches) {
         toggleHam = false;
 
         const hamburger = document.getElementById("hamburger-content");
@@ -28,6 +28,35 @@ function resizeFunctions() {
         hamburgerlines[0].style.transform = "";
         hamburgerlines[1].style.opacity = "1";
         hamburgerlines[2].style.transform = "";
+    }
+
+    if (window.matchMedia("(max-width: 686px)").matches) {
+        const policies = document.getElementsByClassName("policies");
+        for (let i = 0; i < policies.length; i++) {
+            if (i === 0) {
+                policies[i].innerHTML = `PP`;
+            }
+            if (i === 1) {
+                policies[i].innerHTML = `ToS`;
+            }
+            if (i === 2) {
+                policies[i].innerHTML = `CoPo`;
+            }
+        }
+    }
+    else if (!window.matchMedia("(max-width: 686px)").matches) {
+        const policies = document.getElementsByClassName("policies");
+        for (let i = 0; i < policies.length; i++) {
+            if (i === 0) {
+                policies[i].innerHTML = `Privacy Policy`;
+            }
+            if (i === 1) {
+                policies[i].innerHTML = `Terms of Service`;
+            }
+            if (i === 2) {
+                policies[i].innerHTML = `Cookie Policy`;
+            }
+        }
     }
 
     document.documentElement.style.setProperty('--viewable-amnt-carousel', Math.round(carouselWidth / 392));

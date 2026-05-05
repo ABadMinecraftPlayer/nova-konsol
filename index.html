@@ -25,7 +25,7 @@
                 <span>Sign In</span>
                 <!-- The search icon is out of bounds -->
                 <div class="search">
-                    <input id="search-input" name="search-input" placeholder="Search">
+                    <input name="search-input" placeholder="Search">
                 </div>
                 <div id="hamburger-menu">
                     <div class="hamburger-lines" onclick="toggleHamburger()">
@@ -41,6 +41,11 @@
                         <li href="#">News</li>
                         <li href="#">Store</li>
                         <li href="#">Support</li>
+                        <li>
+                            <div class="search">
+                                <input name="search-input" placeholder="Search">
+                            </div><span>Sign In</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +53,7 @@
     </header>
     <main>
         <section class="hero">
-            <img src="./img/placeholder.png" alt="Nova Console 6">
+            <img src="./img/nova_console.png" alt="Nova Console 6">
         </section>
         <section class="info">
             <!-- alignment of info -->
@@ -79,9 +84,9 @@
                 <button id="left-scroll" onclick="carouselScroll('left')">&lt;</button>
                 <div id="view-track">
                     <div id="track">
-                        <div onclick="SwapInfo(1)"><img src="img/placeholder1.png" alt="product1" id="swapinfo_1">
+                        <div onclick="SwapInfo(1)"><img src="img/nova_console.png" alt="Nova Console 6" id="swapinfo_1">
                         </div>
-                        <div onclick="SwapInfo(2)"><img src="img/placeholder2.png" alt="product2" id="swapinfo_2">
+                        <div onclick="SwapInfo(2)"><img src="img/nova_controller.png" alt="Nova controller" id="swapinfo_2">
                         </div>
                         <div onclick="SwapInfo(3)"><img src="img/placeholder3.png" alt="product3" id="swapinfo_3">
                         </div>
@@ -117,56 +122,61 @@
         <div id="footer-top">
             <div id="footer-top-left">
                 <div>
-                    <h3>Products</h3>
-                    <ul>
-                        <li><a href="#">Nova consoles</a></li>
-                        <li><a href="#">Nova games</a></li>
-                        <li><a href="#">Nova Accessories</a></li>
-                    </ul>
+                    <div>
+                        <h3>Products</h3>
+                        <ul>
+                            <li><a href="#">Nova consoles</a></li>
+                            <li><a href="#">Nova games</a></li>
+                            <li><a href="#">Nova Accessories</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div>
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="#">Feedback</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">News</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Explore</h3>
-                    <ul>
-                        <li><a href="#">Nova AI</a></li>
-                        <li><a href="#">Official Blog</a></li>
-                        <li><a href="#">Events</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Developers</h3>
-                    <ul>
-                        <li><a href="#">Developer Portal</a></li>
-                        <li><a href="#">Developer Key</a></li>
-                        <li><a href="#">API Reference</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Support Docs</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
+                    <div>
+                        <h3>Explore</h3>
+                        <ul>
+                            <li><a href="#">Nova AI</a></li>
+                            <li><a href="#">Official Blog</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Developers</h3>
+                        <ul>
+                            <li><a href="#">Developer Portal</a></li>
+                            <li><a href="#">Developer Key</a></li>
+                            <li><a href="#">API Reference</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Support Docs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div id="footer-top-right">
-                <img src="img/nova_logo.png" alt="nova logo">
+                <div id="nova-logo_footer" alt="nova logo">
+                </div>
                 <p>Empowering your gaming experience through long-term innovation means continually enhancing gameplay
                     with forward-thinking design and evolving technology.</p>
                 <div id="socials">
@@ -186,9 +196,9 @@
                     </select>
                 </div>
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#" class="policies">Privacy Policy</a></li>
+                    <li><a href="#" class="policies">Terms of Service</a></li>
+                    <li><a href="#" class="policies">Cookie Policy</a></li>
                 </ul>
             </div>
         </div>
