@@ -116,7 +116,7 @@ nav>div>span:hover:not(.hamburger-lines span) {
     position: absolute;
     height: 25px;
     width: 25px;
-    background-image: url("../img/search_button.jpg");
+    background-image: url("../img/search_button.png");
     background-position: center;
     background-size: cover;
     cursor: pointer;
@@ -132,7 +132,7 @@ HERO
 
 .hero {
     display: flex;
-    background: no-repeat center/cover url("../img/nova_swirl_animated_loop.gif");
+    background: no-repeat center/cover url("../img/nova_swirl.png");
     height: calc(100vh - var(--navbar-height));
     width: 100%;
     margin-top: var(--navbar-height);
@@ -320,6 +320,7 @@ WALL OF IMGS
 #wall-of-imgs li {
     width: 100%;
     overflow: hidden;
+    border: #122131 solid 4px;
 }
 
 #wall-of-imgs img {
