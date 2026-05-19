@@ -1,0 +1,74 @@
+{
+  "navigation": {
+    "games": "Games",
+    "consoles": "Consoles",
+    "accessories": "Accessories",
+    "news": "News",
+    "store": "Store",
+    "support": "Support",
+    "signin": "Sign In",
+    "search_placeholder": "Search"
+  },
+
+  "hero_title": "DISCOVER ALL OF NOVA'S PRODUCTS",
+
+  "product_title": "NovaBase 6 Gaming Console",
+
+  "product_text_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione inventore recusandae nihil dolorum iste ex architecto quis, minus veniam minima, nobis doloribus numquam ipsa rem sint eos.",
+
+  "products": {
+    "console_6": "Nova Console 6",
+    "controller": "Nova Controller",
+    "charger": "Charger",
+    "surround_sound": "Surround Sound",
+    "cleaning_kit": "Cleaning Kit",
+    "headphones": "Headphones",
+    "charging_station": "Charging Station",
+    "ssd": "SSD",
+    "vr": "VR Headset"
+  },
+
+  "games": {
+    "rain_world": "Rain World",
+    "tellari": "Tellari",
+    "minecraft": "Minecraft",
+    "cyberpunk": "Cyberpunk",
+    "cities_skylines": "Cities: Skylines",
+    "bibites": "Bibites"
+  },
+
+  "footer": {
+    "products": "Products",
+    "company": "Company",
+    "resources": "Resources",
+    "explore": "Explore",
+    "developers": "Developers",
+    "support": "Support",
+
+    "about_us": "About Us",
+    "careers": "Careers",
+    "contact": "Contact",
+
+    "feedback": "Feedback",
+    "community": "Community",
+    "news": "News",
+
+    "official_blog": "Official Blog",
+    "events": "Events",
+
+    "developer_portal": "Developer Portal",
+    "developer_key": "Developer Keys",
+    "api_reference": "API Reference",
+
+    "support_docs": "Support Docs",
+    "faq": "FAQ",
+
+    "description": "Empowering your gaming experience through long-term innovation means continuously enhancing gameplay with forward-thinking design and evolving technology.",
+
+    "copyright": "© 2024 Nova Corporation. All rights reserved.",
+
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service",
+    "cookie_policy": "Cookie Policy"
+  }
+}

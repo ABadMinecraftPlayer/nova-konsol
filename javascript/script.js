@@ -114,3 +114,44 @@ function carouselScroll(dir) {
 
     track.style.transform = `translateX(-${index * step}px)`;
 };
+
+let currentLanguage = "en";
+
+function initPage() {
+    loadLanguage(currentLanguage);
+}
+
+// Load JSON file
+async function loadLanguage(lang) {
+    const res = await fetch(`locales/${lang}.json`);
+    const data = await res.json();
+
+    applyTranslations(data);
+}
+
+// Apply translations (supports nested keys)
+function applyTranslations(data) {
+    document.querySelectorAll("[data-key]").forEach(el => {
+        const keyPath = el.dataset.key.split(".");
+        let value = data;
+
+        for (const key of keyPath) {
+            value = value?.[key];
+        }
+
+        if (value !== undefined) {
+            if (el.tagName === "INPUT") {
+                el.placeholder = value;
+            } else {
+                el.textContent = value;
+            }
+        }
+    });
+}
+
+// Language switch
+function changeLanguage() {
+    const lang = document.getElementById("language-chosen").value;
+    currentLanguage = lang;
+    loadLanguage(lang);
+}

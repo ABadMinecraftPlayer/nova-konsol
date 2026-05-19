@@ -1,0 +1,74 @@
+{
+  "navigation": {
+    "games": "Spel",
+    "consoles": "Konsoler",
+    "accessories": "Tillbehör",
+    "news": "Nyheter",
+    "store": "Butik",
+    "support": "Support",
+    "signin": "Logga in",
+    "search_placeholder": "Sök"
+  },
+
+  "hero_title": "UPPTÄCK ALLA NOVAS PRODUKTER",
+
+  "product_title": "NovaBase 6-spelkonsol",
+
+  "product_text_1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione inventore recusandae nihil dolorum iste ex architecto quis, minus veniam minima, nobis doloribus numquam ipsa rem sint eos.",
+
+  "products": {
+    "console_6": "Nova Konsol 6",
+    "controller": "Nova Handkontroll",
+    "charger": "Laddare",
+    "surround_sound": "Surroundljud",
+    "cleaning_kit": "Rengöringskit",
+    "headphones": "Hörlurar",
+    "charging_station": "Laddstation",
+    "ssd": "SSD",
+    "vr": "VR-headset"
+  },
+
+  "games": {
+    "rain_world": "Rain World",
+    "tellari": "Tellari",
+    "minecraft": "Minecraft",
+    "cyberpunk": "Cyberpunk",
+    "cities_skylines": "Cities: Skylines",
+    "bibites": "Bibites"
+  },
+
+  "footer": {
+    "products": "Produkter",
+    "company": "Företag",
+    "resources": "Resurser",
+    "explore": "Utforska",
+    "developers": "Utvecklare",
+    "support": "Support",
+
+    "about_us": "Om oss",
+    "careers": "Karriärer",
+    "contact": "Kontakt",
+
+    "feedback": "Feedback",
+    "community": "Community",
+    "news": "Nyheter",
+
+    "official_blog": "Officiell blogg",
+    "events": "Evenemang",
+
+    "developer_portal": "Utvecklarportal",
+    "developer_key": "Utvecklarnycklar",
+    "api_reference": "API-referens",
+
+    "support_docs": "Supportdokument",
+    "faq": "Vanliga frågor",
+
+    "description": "Vi förbättrar din spelupplevelse genom långsiktig innovation och framtidssäker teknik som ständigt utvecklar spelandet.",
+
+    "copyright": "© 2024 Nova Corporation. Alla rättigheter förbehållna.",
+
+    "privacy_policy": "Integritetspolicy",
+    "terms_of_service": "Användarvillkor",
+    "cookie_policy": "Cookiepolicy"
+  }
+}

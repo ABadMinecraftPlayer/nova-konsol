@@ -9,105 +9,134 @@
     <script src="javascript/script.js" defer></script>
 </head>
 
-<body onload="carouselScroll(); toggleHamburger();" onresize="resizeFunctions()">
+<body onload="initPage(); carouselScroll(); toggleHamburger();" onresize="resizeFunctions()">
     <header>
         <nav>
-            <a href="index.html"> <img src="./img/nova_logo.png" alt="nova logo"> </a>
+            <a href="index.html">
+                <img src="./img/nova_logo.png" alt="nova logo">
+            </a>
+
             <ul id="nav-list">
-                <li href="#">Games</li>
-                <li href="#">Consoles</li>
-                <li href="#">Accesories</li>
-                <li href="#">News</li>
-                <li href="#">Store</li>
-                <li href="#">Support</li>
+                <li data-key="navigation.games">Games</li>
+                <li data-key="navigation.consoles">Consoles</li>
+                <li data-key="navigation.accessories">Accessories</li>
+                <li data-key="navigation.news">News</li>
+                <li data-key="navigation.store">Store</li>
+                <li data-key="navigation.support">Support</li>
             </ul>
+
             <div>
-                <span>Sign In</span>
-                <!-- The search icon is out of bounds -->
+                <span data-key="navigation.signin">Sign In</span>
+
                 <div class="search">
-                    <input name="search-input" placeholder="Search">
+                    <input name="search-input" data-key="navigation.search_placeholder" placeholder="Search">
                 </div>
+
                 <div id="hamburger-menu">
                     <div class="hamburger-lines" onclick="toggleHamburger()">
                         <span class="line"></span>
                         <span class="line"></span>
                         <span class="line"></span>
                     </div>
-                    <!-- This is the dropdown menu for the hamburger menu -->
+
                     <ul id="hamburger-content">
-                        <li href="#">Games</li>
-                        <li href="#">Consoles</li>
-                        <li href="#">Accesories</li>
-                        <li href="#">News</li>
-                        <li href="#">Store</li>
-                        <li href="#">Support</li>
+                        <li data-key="navigation.games">Games</li>
+                        <li data-key="navigation.consoles">Consoles</li>
+                        <li data-key="navigation.accessories">Accessories</li>
+                        <li data-key="navigation.news">News</li>
+                        <li data-key="navigation.store">Store</li>
+                        <li data-key="navigation.support">Support</li>
                         <li>
                             <div class="search">
-                                <input name="search-input" placeholder="Search">
-                            </div><span>Sign In</span>
+                                <input name="search-input" data-key="navigation.search_placeholder"
+                                    placeholder="Search">
+                            </div>
+                            <span data-key="navigation.signin">Sign In</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <main>
         <section class="hero">
             <img src="./img/nova_console.png" alt="Nova Console 6">
         </section>
+
         <section class="info">
-            <!-- alignment of info -->
             <div id="main-info">
                 <div id="product-info_text">
-                    <h1>DISCOVER ALL OF NOVAS PRODUCTS</h1>
+                    <h1 data-key="hero_title">DISCOVER ALL OF NOVA'S PRODUCTS</h1>
+
                     <div>
-                        <h2>NovaBase 6 Gaming Console</h2>
+                        <h2 data-key="product_title">NovaBase 6 Gaming Console</h2>
+
                         <div>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione
-                                inventore
-                                recusandae nihil dolorum iste ex architecto quis, minus veniam minima, nobis doloribus
-                                numquam
-                                ipsa
-                                rem
-                                sint eos.</p>
+                            <p data-key="product_text_1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione
+                                inventore recusandae nihil dolorum iste ex architecto quis, minus veniam minima, nobis
+                                doloribus numquam ipsa rem sint eos.
+                            </p>
+
                             <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione
-                                inventore
-                                recusandae nihil dolorum iste ex architecto quis, minus veniam minima.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt ut ratione
+                                inventore recusandae nihil dolorum iste ex architecto quis, minus veniam minima.
                             </p>
                         </div>
                     </div>
                 </div>
+
                 <div id="card-1_display_img"></div>
             </div>
+
             <section id="carousel">
                 <button id="left-scroll" onclick="carouselScroll('left')">&lt;</button>
+
                 <div id="view-track">
                     <div id="track">
-                        <div onclick="SwapInfo(1)"><img src="img/nova_console.png" alt="Nova Console 6" id="swapinfo_1">
+                        <div onclick="SwapInfo(1)">
+                            <img src="img/nova_console.png" alt="Nova Console 6" id="swapinfo_1">
                         </div>
-                        <div onclick="SwapInfo(2)"><img src="img/nova_controller.png" alt="Nova controller"
-                                id="swapinfo_2">
+
+                        <div onclick="SwapInfo(2)">
+                            <img src="img/nova_controller.png" alt="Nova controller" id="swapinfo_2">
                         </div>
-                        <div onclick="SwapInfo(3)"><img src="img/charger.png" alt="charger" id="swapinfo_3">
+
+                        <div onclick="SwapInfo(3)">
+                            <img src="img/charger.png" alt="charger" id="swapinfo_3">
                         </div>
-                        <div onclick="SwapInfo(4)"><img src="img/console-sss.png" alt="surround sound" id="swapinfo_4">
+
+                        <div onclick="SwapInfo(4)">
+                            <img src="img/console-sss.png" alt="surround sound" id="swapinfo_4">
                         </div>
-                        <div onclick="SwapInfo(5)"><img src="img/cleaning_kit-nova.png" alt="product5" id="swapinfo_5">
+
+                        <div onclick="SwapInfo(5)">
+                            <img src="img/cleaning_kit-nova.png" alt="product5" id="swapinfo_5">
                         </div>
-                        <div onclick="SwapInfo(6)"><img src="img/headphones_nova.png" alt="product6" id="swapinfo_6">
+
+                        <div onclick="SwapInfo(6)">
+                            <img src="img/headphones_nova.png" alt="product6" id="swapinfo_6">
                         </div>
-                        <div onclick="SwapInfo(7)"><img src="img/charging_station.png" alt="product7" id="swapinfo_7">
+
+                        <div onclick="SwapInfo(7)">
+                            <img src="img/charging_station.png" alt="product7" id="swapinfo_7">
                         </div>
-                        <div onclick="SwapInfo(8)"><img src="img/ssd.png" alt="product8" id="swapinfo_8">
+
+                        <div onclick="SwapInfo(8)">
+                            <img src="img/ssd.png" alt="product8" id="swapinfo_8">
                         </div>
-                        <div onclick="SwapInfo(9)"><img src="img/vr-nova.png" alt="product9" id="swapinfo_9">
+
+                        <div onclick="SwapInfo(9)">
+                            <img src="img/vr-nova.png" alt="product9" id="swapinfo_9">
                         </div>
                     </div>
                 </div>
+
                 <button id="right-scroll" onclick="carouselScroll('right')">&gt;</button>
             </section>
         </section>
+
         <section id="wall-of-imgs">
             <ul>
                 <li><a href="#"><img src="img/rain-world_game.jpg" alt="rain world"></a></li>
@@ -119,67 +148,77 @@
             </ul>
         </section>
     </main>
+
     <footer>
         <div id="footer-top">
             <div id="footer-top-left">
                 <div>
                     <div>
-                        <h3>Products</h3>
+                        <h3 data-key="footer.products">Products</h3>
                         <ul>
                             <li><a href="#">Nova consoles</a></li>
                             <li><a href="#">Nova games</a></li>
                             <li><a href="#">Nova Accessories</a></li>
                         </ul>
                     </div>
+
                     <div>
-                        <h3>Company</h3>
+                        <h3 data-key="footer.company">Company</h3>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#" data-key="footer.about_us">About Us</a></li>
+                            <li><a href="#" data-key="footer.careers">Careers</a></li>
+                            <li><a href="#" data-key="footer.contact">Contact</a></li>
                         </ul>
                     </div>
+
                     <div>
-                        <h3>Resources</h3>
+                        <h3 data-key="footer.resources">Resources</h3>
                         <ul>
-                            <li><a href="#">Feedback</a></li>
-                            <li><a href="#">Community</a></li>
-                            <li><a href="#">News</a></li>
+                            <li><a href="#" data-key="footer.feedback">Feedback</a></li>
+                            <li><a href="#" data-key="footer.community">Community</a></li>
+                            <li><a href="#" data-key="footer.news">News</a></li>
                         </ul>
                     </div>
                 </div>
+
                 <div>
                     <div>
-                        <h3>Explore</h3>
+                        <h3 data-key="footer.explore">Explore</h3>
                         <ul>
                             <li><a href="#">Nova AI</a></li>
-                            <li><a href="#">Official Blog</a></li>
-                            <li><a href="#">Events</a></li>
+                            <li><a href="#" data-key="footer.official_blog">Official Blog</a></li>
+                            <li><a href="#" data-key="footer.events">Events</a></li>
                         </ul>
                     </div>
+
                     <div>
-                        <h3>Developers</h3>
+                        <h3 data-key="footer.developers">Developers</h3>
                         <ul>
-                            <li><a href="#">Developer Portal</a></li>
-                            <li><a href="#">Developer Key</a></li>
-                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#" data-key="footer.developer_portal">Developer Portal</a></li>
+                            <li><a href="#" data-key="footer.developer_key">Developer Keys</a></li>
+                            <li><a href="#" data-key="footer.api_reference">API Reference</a></li>
                         </ul>
                     </div>
+
                     <div>
-                        <h3>Support</h3>
+                        <h3 data-key="footer.support">Support</h3>
                         <ul>
-                            <li><a href="#">Support Docs</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#" data-key="footer.support_docs">Support Docs</a></li>
+                            <li><a href="#" data-key="footer.contact">Contact Us</a></li>
+                            <li><a href="#" data-key="footer.faq">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+
             <div id="footer-top-right">
-                <div id="nova-logo_footer" alt="nova logo">
-                </div>
-                <p>Empowering your gaming experience through long-term innovation means continually enhancing gameplay
-                    with forward-thinking design and evolving technology.</p>
+                <div id="nova-logo_footer" alt="nova logo"></div>
+
+                <p data-key="footer.description">
+                    Empowering your gaming experience through long-term innovation means continuously enhancing gameplay
+                    with forward-thinking design and evolving technology.
+                </p>
+
                 <div id="socials">
                     <a href="#"><img src="img/x_icon.svg" alt="our x page"></a>
                     <a href="#"><img src="img/linkedin_icon.svg" alt="our linkedin page"></a>
@@ -187,19 +226,24 @@
                 </div>
             </div>
         </div>
+
         <div id="footer-bottom">
-            <p>© 2024 Nova Corporation. All rights reserved.</p>
+            <p data-key="footer.copyright">© 2024 Nova Corporation. All rights reserved.</p>
+
             <div id="footer-bottom-right">
-                <div id="lang"><img src="img/lang_icon.png" alt="change languages">
-                    <select id="language-chosen">
-                        <option>English</option>
-                        <option>Svenska</option>
+                <div id="lang">
+                    <img src="img/lang_icon.png" alt="change language">
+
+                    <select id="language-chosen" onchange="changeLanguage()">
+                        <option value="en">English</option>
+                        <option value="sv">Svenska</option>
                     </select>
                 </div>
+
                 <ul>
-                    <li><a href="#" class="policies">Privacy Policy</a></li>
-                    <li><a href="#" class="policies">Terms of Service</a></li>
-                    <li><a href="#" class="policies">Cookie Policy</a></li>
+                    <li><a href="#" class="policies" data-key="footer.privacy_policy">Privacy Policy</a></li>
+                    <li><a href="#" class="policies" data-key="footer.terms_of_service">Terms of Service</a></li>
+                    <li><a href="#" class="policies" data-key="footer.cookie_policy">Cookie Policy</a></li>
                 </ul>
             </div>
         </div>
