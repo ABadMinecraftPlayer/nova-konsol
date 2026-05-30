@@ -1,18 +1,6 @@
 // ham. vars
 let toggleHam = true;
 
-// car. vars
-let index = 0;
-
-const track = document.getElementById('track');
-let visible = 5;
-
-const items = track.children;
-const max_length = items.length;
-
-const leftbuttonscroll = document.getElementById('left-scroll')
-const rightbuttonscroll = document.getElementById('right-scroll')
-
 // resizeFunctions
 function resizeFunctions() {
     const carouselWidth = document.getElementById('carousel').offsetWidth;
@@ -89,69 +77,3 @@ function toggleHamburger() {
         : "";
 }
 
-// Swaps the card-1_display_img background image to the one of the clicked image in the side-scroll_product_info
-function SwapInfo(x) {
-    var swap = document.getElementById(`swapinfo_${x}`);
-    var toswap = document.getElementById("card-1_display_img");
-
-    toswap.style.backgroundImage = `url(${swap.src})`;
-}
-
-// Carousel
-function carouselScroll(dir) {
-    const first = items[0].getBoundingClientRect();
-    const second = items[1].getBoundingClientRect();
-    const step = second.left - first.left;
-
-    if (dir === 'left' && index - 1 >= 0) index -= 1
-    if (dir === 'right' && index + 1 < max_length - visible + 1) index += 1;
-
-    if (index + 1 > max_length - visible) rightbuttonscroll.style.backgroundColor = '#88693ecb';
-    else rightbuttonscroll.style.backgroundColor = '#c59756';
-
-    if (index === 0) leftbuttonscroll.style.backgroundColor = '#88693ecb';
-    else leftbuttonscroll.style.backgroundColor = '#c59756';
-
-    track.style.transform = `translateX(-${index * step}px)`;
-};
-
-let currentLanguage = "en";
-
-function initPage() {
-    loadLanguage(currentLanguage);
-}
-
-// Load JSON file
-async function loadLanguage(lang) {
-    const res = await fetch(`locales/${lang}.json`);
-    const data = await res.json();
-
-    applyTranslations(data);
-}
-
-// Apply translations (supports nested keys)
-function applyTranslations(data) {
-    document.querySelectorAll("[data-key]").forEach(el => {
-        const keyPath = el.dataset.key.split(".");
-        let value = data;
-
-        for (const key of keyPath) {
-            value = value?.[key];
-        }
-
-        if (value !== undefined) {
-            if (el.tagName === "INPUT") {
-                el.placeholder = value;
-            } else {
-                el.textContent = value;
-            }
-        }
-    });
-}
-
-// Language switch
-function changeLanguage() {
-    const lang = document.getElementById("language-chosen").value;
-    currentLanguage = lang;
-    loadLanguage(lang);
-}
