@@ -1,6 +1,5 @@
 #form-section {
     margin-top: calc(var(--navbar-height) + 50px);
-    height: calc(100vh - var(--navbar-height) - 50px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +28,6 @@ form {
     flex-direction: column;
     gap: 40px;
     width: 60%;
-    height: 90%;
     margin: 0 auto;
     padding: 4vh 2vw;
     border: 3px solid #6980a5;
