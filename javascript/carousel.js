@@ -10,6 +10,18 @@ const max_length = items.length;
 const leftbuttonscroll = document.getElementById('left-scroll')
 const rightbuttonscroll = document.getElementById('right-scroll')
 
+function resizeFunctions() {
+    const carouselWidth = document.getElementById('carousel').offsetWidth;
+    document.documentElement.style.setProperty('--viewable-amnt-carousel', Math.round(carouselWidth / 392));
+    visible = Math.round(carouselWidth / 392);
+}
+
+resizeFunctions();
+
+track.style.transform = "translateX(0px)";
+carouselScroll(undefined);
+carouselScroll();
+
 // Swaps the card-1_display_img background image to the one of the clicked image in the side-scroll_product_info
 function SwapInfo(x) {
     var swap = document.getElementById(`swapinfo_${x}`);
@@ -20,6 +32,11 @@ function SwapInfo(x) {
 
 // Carousel
 function carouselScroll(dir) {
+    if (items.length < 2) {
+        // Not enough items to scroll, reset transform and return
+        track.style.transform = "translateX(0px)";
+        return;
+    }
     const first = items[0].getBoundingClientRect();
     const second = items[1].getBoundingClientRect();
     const step = second.left - first.left;

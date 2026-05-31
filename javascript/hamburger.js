@@ -3,8 +3,6 @@ let toggleHam = true;
 
 // resizeFunctions
 function resizeFunctions() {
-    const carouselWidth = document.getElementById('carousel').offsetWidth;
-
     if (!window.matchMedia("(max-width: 728px)").matches) {
         toggleHam = false;
 
@@ -46,13 +44,6 @@ function resizeFunctions() {
             }
         }
     }
-
-    document.documentElement.style.setProperty('--viewable-amnt-carousel', Math.round(carouselWidth / 392));
-    visible = Math.round(carouselWidth / 392);
-
-    track.style.transform = "translateX(0px)";
-    index = 0;
-    carouselScroll();
 }
 
 // Hamburger

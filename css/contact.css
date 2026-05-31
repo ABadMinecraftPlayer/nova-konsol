@@ -81,3 +81,14 @@ button {
 #form-status {
     display: none;
 }
+
+@media screen and (max-width: 1400px) {
+    form {
+        width: 90%;
+        padding: 4vh 2vw;
+    }
+
+    .special-form {
+        grid-template-columns: 1fr;
+    }
+}
